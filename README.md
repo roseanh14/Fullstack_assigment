@@ -25,8 +25,8 @@ The goal of this project is to demonstrate:
     - Asteroid / Moon impact article
 
 - **Simple mocked AI logic**
-  - `hello`, `hi`, `ahoj` → friendly greeting from the assistant  
-  - `latest news` / `news` → assistant explains it will show mocked news  
+  - `hello` → friendly greeting from the assistant  
+  - `latest news`  → assistant explains it will show mocked news  
   - anything else → generic “mocked answer for your question”
 
 
@@ -36,7 +36,7 @@ The goal of this project is to demonstrate:
 
 - Python
 - Flask
-- Flask-CORS
+
 
 **Frontend**
 
@@ -70,6 +70,7 @@ Install dependencies:
 
 npm install
 if not yet installed in this project:
+
 npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
 
 Run the dev server:
