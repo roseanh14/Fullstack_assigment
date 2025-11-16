@@ -42,7 +42,7 @@ The goal of this project is to demonstrate:
 
 - React (Vite)
 - Material UI (MUI)
-- Plain fetch API for HTTP calls
+- fetch API for HTTP calls
 
 # Backend Setup (Flask)
 
