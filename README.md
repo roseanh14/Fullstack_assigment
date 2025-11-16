@@ -69,8 +69,8 @@ cd frontend
 Install dependencies:
 
 npm install
-# if not yet installed in this project:
-# npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
+if not yet installed in this project:
+npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
 
 Run the dev server:
 
