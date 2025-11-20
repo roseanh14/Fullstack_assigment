@@ -1,10 +1,23 @@
-from .AI_mock_data import MOCK_SOURCES
+
+from .AI_mock_data import (
+    GREETING_TRIGGER,
+    GREETING_ANSWER,
+    THANKS_TRIGGERS,
+    THANKS_ANSWER,
+    DEFAULT_ANSWER,
+    MOCK_SOURCES,
+)
 
 
 def get_mock_response(question: str):
-    answer = (
-        "Sure, here are some example news results for you. "
-        "If you need anything more specific, just ask me a follow-up question"
-    )
+    lower_q = (question or "").strip().lower()
 
-    return answer, MOCK_SOURCES
+    
+    if lower_q == GREETING_TRIGGER:
+        return GREETING_ANSWER, []
+
+    if lower_q in THANKS_TRIGGERS:
+        return THANKS_ANSWER, []
+
+    
+    return DEFAULT_ANSWER, MOCK_SOURCES

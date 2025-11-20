@@ -1,3 +1,17 @@
+
+GREETING_TRIGGER = "hello"
+GREETING_ANSWER = "hi how can i help u ?"
+
+THANKS_TRIGGERS = ("thank u", "thank you", "thanks", "thx")
+THANKS_ANSWER = "You're welcome! Have a great day!"
+
+
+DEFAULT_ANSWER = (
+    "Sure, here are some example news results for you. "
+    "If you need anything more specific, just ask me a follow-up question"
+)
+
+
 MOCK_SOURCES = [
     {
         "title": "Largest observed flare from a black hole unleashes the light of 10 trillion suns",
