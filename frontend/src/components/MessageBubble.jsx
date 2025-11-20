@@ -5,12 +5,8 @@ function MessageBubble({ message }) {
   const isUser = message.role === "user";
 
   return (
-    <Box
-      className={`message-row ${isUser ? "user" : "assistant"}`}
-    >
-      <Box
-        className={`message-bubble ${isUser ? "user" : "assistant"}`}
-      >
+    <Box className={`message-row ${isUser ? "user" : "assistant"}`}>
+      <Box className={`message-bubble ${isUser ? "user" : "assistant"}`}>
         <Typography
           variant="caption"
           className={`message-label ${isUser ? "user" : "assistant"}`}
@@ -29,10 +25,7 @@ function MessageBubble({ message }) {
           message.sources &&
           message.sources.length > 0 && (
             <Box sx={{ mt: 1.2 }}>
-              <Typography
-                variant="caption"
-                className="sources-label"
-              >
+              <Typography variant="caption" className="sources-label">
                 Sources:
               </Typography>
               {message.sources.map((source, i) => (

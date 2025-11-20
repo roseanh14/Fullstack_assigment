@@ -3,12 +3,15 @@ import { useState, useRef, useEffect } from "react";
 import { Box, Container, Typography } from "@mui/material";
 import MessageList from "./MessageList";
 import ChatInput from "./ChatInput";
+import { useChatApi } from "../hooks/chat.api";
 
 function ChatApp() {
   const [question, setQuestion] = useState("");
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
+
+  const { getAnswer } = useChatApi();
 
   useEffect(() => {
     if (messagesEndRef.current) {
@@ -26,13 +29,7 @@ function ChatApp() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question: trimmed }),
-      });
-
-      const data = await response.json();
+      const data = await getAnswer(trimmed);
 
       const assistantMessage = {
         role: "assistant",
